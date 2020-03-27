@@ -24,6 +24,7 @@ class _MyMainPageState extends State<MyMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      /* -- OP APP BAR INFO -- */
       body: Column(
         children: <Widget>[
           Padding(
@@ -50,8 +51,85 @@ class _MyMainPageState extends State<MyMainPage> {
               ],
             ),
           ),
+          /* -- OP BUTTONS CATEGORY -- */
+          SizedBox(height: 20.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Container(
+                        color: Colors.green.withOpacity(0.1),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Image.asset('assets/chicken.png', width: 40.0, height: 40.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+                    Text('CHICKEN', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Container(
+                        color: Colors.red.withOpacity(0.1),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Image.asset('assets/burger.png', width: 40.0, height: 40.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+                    Text('BURGER', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Container(
+                        color: Colors.orange.withOpacity(0.1),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Image.asset('assets/fish.png', width: 40.0, height: 40.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+                    Text('FISH', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Container(
+                        color: Colors.purple.withOpacity(0.1),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Image.asset('assets/meat.png', width: 40.0, height: 40.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
+                    Text('MEAT', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+                  ],
+                )
+              ],
+            ),
+          )
+          /* -- END BUTTONS CATEGORY -- */
         ],
       ),
+      /* -- END BAR INFO -- */
+      /* -- OP BOTTOM BAR -- */
       bottomNavigationBar: Container(
         height: 100,
         decoration: BoxDecoration(
@@ -74,6 +152,7 @@ class _MyMainPageState extends State<MyMainPage> {
           ),
         ),
       ),
+      /* -- END BOTTOM BAR -- */
     );
   }
 }
