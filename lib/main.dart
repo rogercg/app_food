@@ -23,6 +23,35 @@ class _MyMainPageState extends State<MyMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(left:25.0, top: 70.0, right: 25.0),
+            child: Row(
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("Hi, Kevin!", style: TextStyle(color: Colors.black, fontSize: 30.0, fontWeight: FontWeight.bold),),
+                    Row(
+                      children: <Widget>[
+                        Text("YOU ARE IN", style: TextStyle(color: Colors.grey),),
+                        SizedBox(width: 5.0,),
+                        Text("54 KING PORTS", style: TextStyle(color: Colors.pink),),
+                        SizedBox(width: 5.0,),
+                        Icon(Icons.arrow_drop_down),
+                      ],
+                    ),
+                  ],
+                ),
+                Spacer(),
+                Icon(Icons.search, color: Colors.grey,)
+              ],
+            ),
+          ),
+        ],
+      ),
       bottomNavigationBar: Container(
         height: 100,
         decoration: BoxDecoration(
